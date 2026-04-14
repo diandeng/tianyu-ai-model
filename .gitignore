@@ -1,0 +1,27 @@
+# --- 数据集 (绝对不要上传，太大了) ---
+datasets/
+*.cache
+
+# --- 训练产物 ---
+training/runs/
+*.pt
+*.onnx
+# 排除掉下载的预训练模型
+yolov8n-cls.pt
+
+# --- Python 垃圾文件 ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# --- 系统 & IDE ---
+.DS_Store
+.idea/
+*.iml
+
+# --- 权重文件 (可选排除) ---
+# 虽然 best.pt 在 service/model 下，但如果大于 100MB，GitHub 会报错。
+# 建议通过其他方式同步权重，或者使用 Git LFS。
+service/model/best.pt

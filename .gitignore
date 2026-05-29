@@ -21,7 +21,5 @@ venv/
 .idea/
 *.iml
 
-# --- 权重文件 (可选排除) ---
-# 虽然 best.pt 在 service/model 下，但如果大于 100MB，GitHub 会报错。
-# 建议通过其他方式同步权重，或者使用 Git LFS。
+# --- 权重文件 (体积大，建议通过卷挂载或 Git LFS) ---
 service/model/best.pt
